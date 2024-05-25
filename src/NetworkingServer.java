@@ -62,6 +62,8 @@ public class NetworkingServer {
     }
 
     private static String solveMaths(String problem) {
+
+        problem = problem.trim();
         if (problem.contains("+")) {
 
         } else if (problem.contains("-")) {
