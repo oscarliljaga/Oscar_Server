@@ -63,9 +63,9 @@ public class NetworkingServer {
 
     private static String solveMaths(String problem) {
         problem = problem.trim();
-        String[] problemTermsStrings = new String[2];
+        String[] problemTermsStrings;
         int[] problemTerms = new int[2];
-        String[] calculations = {"\\+", "-", "\\*", "/"};
+        String[] calculations = {"\\+", "-", "*", "/"};
 
         for (String calculation : calculations) {
             if (problem.contains(calculation)) {
@@ -73,12 +73,13 @@ public class NetworkingServer {
 
                 problemTerms[0] = Integer.parseInt(problemTermsStrings[0]);
                 problemTerms[1] = Integer.parseInt(problemTermsStrings[1]);
+                System.out.println(problemTerms[0] + " and " + problemTerms[1]);
 
             }
         }
 
         if (problem.contains("+")) {
-            return "The sum of " + problem + " is " + problemTerms[0] + problemTerms[1];
+            return "The sum of " + problem + " is " + (problemTerms[0] + problemTerms[1]);
         } else if (problem.contains("-")) {
             return "The difference of " + problem + " is " + (problemTerms[0] - problemTerms[1]);
         } else if (problem.contains("*")) {
