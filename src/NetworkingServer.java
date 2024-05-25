@@ -65,29 +65,31 @@ public class NetworkingServer {
         problem = problem.trim();
         String[] problemTermsStrings;
         int[] problemTerms = new int[2];
-        String[] calculations = {"\\+", "-", "*", "/"};
+        String[] calculations = {"\\+", "-", "\\*", "/"}; // All calculation symbols to look for
 
         for (String calculation : calculations) {
             if (problem.contains(calculation)) {
                 problemTermsStrings = problem.split(calculation);
-
                 problemTerms[0] = Integer.parseInt(problemTermsStrings[0]);
                 problemTerms[1] = Integer.parseInt(problemTermsStrings[1]);
-                System.out.println(problemTerms[0] + " and " + problemTerms[1]);
 
+                switch (calculation) {
+                    case "\\+" -> {
+                        return "The sum of " + problem + " is " + (problemTerms[0] + problemTerms[1]);
+                    }
+                    case "-" -> {
+                        return "The difference of " + problem + " is " + (problemTerms[0] - problemTerms[1]);
+                    }
+                    case "\\*" -> {
+                        return "The product of " + problem + " is " + (problemTerms[0] * problemTerms[1]);
+                    }
+                    case "/" -> {
+                        return "The division of " + problem + " is " + (problemTerms[0] / problemTerms[1]);
+                    }
+                }
             }
         }
 
-        if (problem.contains("+")) {
-            return "The sum of " + problem + " is " + (problemTerms[0] + problemTerms[1]);
-        } else if (problem.contains("-")) {
-            return "The difference of " + problem + " is " + (problemTerms[0] - problemTerms[1]);
-        } else if (problem.contains("*")) {
-            return "The product of " + problem + " is " + (problemTerms[0] * problemTerms[1]);
-        } else if (problem.contains("/")) {
-            return "The division of " + problem + " is " + (problemTerms[0] / problemTerms[1]);
-        } else {
-            return "Please use proper syntax. Ex: [1+2] or [4*5]";
-        }
+        return "Please use proper syntax. Ex: [1+2] or [4*5]";
     }
 }
