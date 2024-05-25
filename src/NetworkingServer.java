@@ -65,13 +65,13 @@ public class NetworkingServer {
         problem = problem.trim();
         String[] problemTermsStrings;
         int[] problemTerms = new int[2];
-        String[] calculations = {"\\+", "-", "\\*", "/"}; // All calculation symbols to look for
+        String[] calculations = {"\\+", "-", "\\*", "/"}; // All calculation symbols to look for. Special characters + and * need escaping
 
         for (String calculation : calculations) {
-            if (problem.contains(calculation)) {
+            if (problem.contains(calculation.substring(calculation.length() - 1))) { //Doesn't look for "\\"
                 problemTermsStrings = problem.split(calculation);
-                problemTerms[0] = Integer.parseInt(problemTermsStrings[0]);
-                problemTerms[1] = Integer.parseInt(problemTermsStrings[1]);
+                problemTerms[0] = Integer.parseInt(problemTermsStrings[0]); //Number before symbol
+                problemTerms[1] = Integer.parseInt(problemTermsStrings[1]); //Number after symbol
 
                 switch (calculation) {
                     case "\\+" -> {
@@ -89,7 +89,6 @@ public class NetworkingServer {
                 }
             }
         }
-
         return "Please use proper syntax. Ex: [1+2] or [4*5]";
     }
 }

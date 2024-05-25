@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e0dd401d-356f-43ce-ae4d-e28a6568dba7" name="Changes" comment="Felsöker + och *">
+    <list default="true" id="e0dd401d-356f-43ce-ae4d-e28a6568dba7" name="Changes" comment="Fortsätter felsöka + och *">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/NetworkingServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NetworkingServer.java" afterDir="false" />
     </list>
@@ -48,7 +48,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1716659804646</updated>
-      <workItem from="1716659805733" duration="4778000" />
+      <workItem from="1716659805733" duration="5457000" />
     </task>
     <task id="LOCAL-00001" summary="Skapat metod för att lösa inputproblem">
       <option name="closed" value="true" />
@@ -82,7 +82,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716665341200</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Fortsätter felsöka + och *">
+      <option name="closed" value="true" />
+      <created>1716666023250</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1716666023250</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -93,6 +101,7 @@
     <MESSAGE value="Jag gick o käkade middag så blev inte riktigt var 15e minut" />
     <MESSAGE value="Påbörjat matteräkningar" />
     <MESSAGE value="Felsöker + och *" />
-    <option name="LAST_COMMIT_MESSAGE" value="Felsöker + och *" />
+    <MESSAGE value="Fortsätter felsöka + och *" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fortsätter felsöka + och *" />
   </component>
 </project>
